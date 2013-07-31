@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>CVG Map Picker</title>
+        <meta name="description" content="Gametype &amp; Map Picker for CVG Tournaments">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+    </head>
+    <body>
+      <div class="container">
+        <img src="images/twitchheader2.png" alt="CVG Live" class="img-responsive" style="display: block;margin-left:auto;margin-right:auto" />
+        <% 10.times do %>
+          <div class="alert alert-info">
+            <a class="close" data-dismiss="alert" href="#">&times;</a>
+            <%= @gametypes.sample %> on <%= @maps.sample %><br />
+          </div>
+        <% end %>
+      </div>
+    </body>
+</html>
